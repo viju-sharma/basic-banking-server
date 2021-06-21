@@ -10,11 +10,15 @@ const routesUrls = require("./routes/routes");
 
 dotenv.config();
 
-mongoose.connect("mongodb://localhost:27017/banking-system", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-});
+mongoose.connect(
+  process.env.DATABASE_ACCESS,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: true,
+    useCreateIndex: true,
+  }
+);
 
 mongoose.connection.on("connected", () => {
   console.log("Mongoose is connected!!!!");

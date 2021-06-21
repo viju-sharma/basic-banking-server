@@ -2,9 +2,9 @@ POST http://localhost:4000/api/addCustomer
 Content-Type: application/json
 
 {
-    "fname" : "jai",
-    "lname" : "ho",
-    "email": "jasai@gmail.com",
+    "fname" : "Dsdsdfkjsd",
+    "lname" : "hosdfdfsdsf",
+    "email": "checkuser@gmail.com",
     "currentBalance" : 15015
 }
 

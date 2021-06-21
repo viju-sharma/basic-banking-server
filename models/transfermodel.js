@@ -1,18 +1,22 @@
 const mongoose = require("mongoose");
 
 const TransferSchema = new mongoose.Schema({
-    acc_from : {
-        type : String,
-    },
-    to_acc : {
-        type : String
-    },
-    money : {
-        type : Number
-    },
-    transfer_time : {
-        type : Date
-    }
+  from_acc: {
+    type: String,
+    required: true,
+  },
+  to_acc: {
+    type: String,
+    required: true,
+  },
+  balance: {
+    type: Number,
+    required: true,
+  },
+  transfer_time: {
+    type: Date,
+    required: true,
+  },
 });
 
 const Transfer = mongoose.model("transfer", TransferSchema);
